@@ -100,7 +100,7 @@ export const PokePage = () => {
                     </a>
                   ) : (
                     <a href={`/pokemon/${pokemon.id - 1}`}>
-                      <button className="prev">prev</button>
+                      <button className="prev">prev </button>
                     </a>
                   )}
 
