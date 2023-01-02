@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import { Header } from "./components/Header";
+// import { Header } from "./components/Header";
 import { IndexPage } from "./pages/IndexPage";
 import { PokePage } from "./pages/PokePage";
 import { SearchPage } from "./pages/SearchPage";
