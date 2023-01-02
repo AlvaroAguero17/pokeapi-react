@@ -8,11 +8,11 @@ import { SearchPage } from "./pages/SearchPage";
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Header />}>
-        <Route index element={<IndexPage />} />
-        <Route path="pokemon/:id" element={<PokePage />} />
-        <Route path="search" element={<SearchPage />} />
-      </Route>
+      {/* <Route path="/" element={<Header />}> */}
+      <Route index element={<IndexPage />} />
+      <Route path="/pokemon/:id" element={<PokePage />} />
+      <Route path="/search" element={<SearchPage />} />
+      {/* </Route> */}
 
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
