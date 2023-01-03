@@ -1,15 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { PokemonContext } from "../context/PokeProvider";
-import useOnClickOutside from "../hooks/useOnClickOutside";
 
 export const FilterBar = () => {
-  const { active, handleCheck, setActive } = useContext(PokemonContext);
+  const { active, handleCheck } = useContext(PokemonContext);
 
-  const ref = useRef();
-
-  useOnClickOutside(ref, () => setActive(false));
   return (
-    <div ref={ref} className={`container-filters ${active ? "active" : ""}`}>
+    <div className={`container-filters ${active ? "active" : ""}`}>
       <div className="filter-type">
         <span>Type</span>
         <div className="group-type">

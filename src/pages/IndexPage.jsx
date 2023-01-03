@@ -1,15 +1,18 @@
 import { PokemonList } from "../components/PokemonList";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { PokemonContext } from "../context/PokeProvider";
 import { FilterBar } from "../components/FilterBar";
+import useOnClickOutside from "../hooks/useOnClickOutside";
 
 export const IndexPage = () => {
   const { onLoadMore, loading, active, setActive } = useContext(PokemonContext);
+  const ref = useRef();
 
+  useOnClickOutside(ref, () => setActive(false));
   return (
     <>
       <div className="container container-filter">
-        <div className="filter" onClick={() => setActive(!active)}>
+        <div className="filter" onClick={() => setActive(!active)} ref={ref}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
